@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    
+    "name": "enMSDN",
+    "description": "Redirects localized (eg. pl-PL) MSDN sites to original en-US locale.",
+    "version": "1.0",
+
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "enmsdn.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon38.png"
+    },
+    "icons": {
+        "128": "icon-128.png"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "*://msdn.microsoft.com/"
+    ]
+}
