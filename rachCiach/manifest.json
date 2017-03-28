@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    
+    "name": "rachCiach",
+    "description": "Wycina wszystkie niepotrzebne wywołania ze stron.",
+    "version": "1.0",
+
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "ciach.js"
+        ]
+    },
+    "options_page": "options.html",
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true,
+        "open_in_tab": true
+    },
+    "browser_action": {
+        "default_icon": "icon38.png"
+    },
+    "icons": {
+        "128": "icon-128.png"
+    },
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/"
+    ]
+}
