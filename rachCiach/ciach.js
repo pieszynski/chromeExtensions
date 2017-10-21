@@ -24,7 +24,7 @@ function restoreOptions ( ) {
         ciach: [ ]
     }, function ( state ) {
 
-        rex = state.ciach.map ( function ( el ) { return new RegExp ( el, 'gi' ); } );
+        rex = state.ciach.map ( function ( el ) { return new RegExp ( el, 'i' ); } );
     });
 }
 
