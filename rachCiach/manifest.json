@@ -3,7 +3,7 @@
     
     "name": "rachCiach",
     "description": "Wycina wszystkie niepotrzebne wywołania ze stron.",
-    "version": "1.1",
+    "version": "1.2",
 
     "background": {
         "persistent": true,
@@ -24,6 +24,7 @@
         "128": "icon-128.png"
     },
     "permissions": [
+        "tabs",
         "storage",
         "webRequest",
         "webRequestBlocking",

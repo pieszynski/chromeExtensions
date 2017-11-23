@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>rachCiach - Opcje</title>
     <style>
-        body: { 
+        body { 
             padding: 10px; 
         }
         textarea {
@@ -13,6 +16,20 @@
     </style>
 </head>
 <body>
+    <div>
+        <div>Linia w konfiguracji może wyglądać tak:</div>
+        <ul>
+            <li><pre>jakis_tam|regex|[123]</pre> - (TEXT) gdy chcemy blokować wszystkie żądania do adresów pasujących do wyrażenia</li>
+            <li><pre>{"rex":"jakis_tam|regex|[123]", "path":"regex_url|paska[adresu]"}</pre> - (JSON) gdy chcemy blokować wszystkie żądania do adresów pasujących do "rex" jeśli w pasku adresu przeglądarki jest adres pasujący do wyrażenia w "path"</li>
+        </ul>
+    </div>
+    <div>Przykłady:</div>
+    <div><pre># blokowanie automatycznie odtwarzanych filmów tylko na stronie głównej Netflixa
+{"path":"netflix\\.com/browse","rex":"nflxvideo\\.net"}
+# blokowanie Facebooka i Gemiusa
+facebook\.com|fbcdn
+gemius\.com
+</pre></div>
     <div>Lista regex do blokowania - nowa linia nowa blokada.</div>
     <div><textarea id="ciach"></textarea></div>
     <div><button id="zapisz">Zapisz</button></div>
