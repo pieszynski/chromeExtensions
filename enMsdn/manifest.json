@@ -3,7 +3,7 @@
     
     "name": "enMSDN",
     "description": "Redirects localized (eg. pl-PL) MSDN sites to original en-US locale.",
-    "version": "1.0",
+    "version": "1.1",
 
     "background": {
         "persistent": false,
@@ -20,6 +20,8 @@
     "permissions": [
         "tabs",
         "webNavigation",
-        "*://msdn.microsoft.com/"
+        "*://msdn.microsoft.com/",
+        "*://azure.microsoft.com/",
+        "*://docs.microsoft.com/"
     ]
 }
